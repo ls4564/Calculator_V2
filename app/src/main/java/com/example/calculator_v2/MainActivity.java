@@ -1,3 +1,4 @@
+
 package com.example.calculator_v2;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             switch (sign)
             {
                 case 1:
-                    num1 = num1 + num2;
+                    ans = ans +num1 + num2;
                     break;
                 case 2:
                     num1 = num1 - num2;
@@ -120,14 +121,14 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     num1 = num1 * num2;
                     break;
-                    case 4:
+                case 4:
                     num1 = num1 / num2;
                     break;
 
             }
             num2 = 0;
             eD1.setText("");
-            eD1.setHint(num1+" ");
+            eD1.setHint(ans+" ");
 
         }
         else
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
     {
         num1 = 0;
         num2 = 0;
+        ans = 0;
         sign = 0;
         eD1.setText("");
         eD1.setHint("");

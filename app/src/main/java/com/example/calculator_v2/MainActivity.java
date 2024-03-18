@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     float num1,num2,ans;
     byte sign;// 1 = + , 2 = - , 3 = * , 4 = /
     boolean fplus,fminus,fmult,fdiv;
+    boolean cplus, cminus,cmult,cdiv;
     char c1;
 
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void plus(View view)
     {
+
         sign = 1;
         String st = eD1.getText().toString();
         if(!st.isEmpty())
@@ -70,14 +72,27 @@ public class MainActivity extends AppCompatActivity {
     {
         sign = 2;
         String st = eD1.getText().toString();
-        eD1.setText("");
         if(!st.isEmpty())
         {
-            num1 = Integer.parseInt(st);
+            if(fminus)
+            {
+                //1-2 = -1
+
+                num2 = Integer.parseInt(st);
+                ans = ans + num1 - num2 ;
+                num1 = 0;
+                eD1.setHint(ans+"");
+            }
+            else
+            {
+                num1 = Integer.parseInt(st);
+            }
             eD1.setText("");
 
 
         }
+        fminus = true;
+
     }
 
     public void mult(View view)
@@ -86,10 +101,31 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            num1 = Integer.parseInt(st);
+            if(ans == 0)
+            {
+                ans = 1;
+            }if(num1 == 0)
+            {
+                num1 = 1;
+             }
+            if(fmult)
+            {
+                //1*2 = 2
+                num2 = Integer.parseInt(st);
+                ans = ans * num1 * num2 ;
+                num1 = 1;
+                eD1.setHint(ans+"");
+            }
+            else
+            {
+                num1 = Integer.parseInt(st);
+            }
             eD1.setText("");
 
+
         }
+        fmult = true;
+
     }
 
     public void div(View view)
@@ -110,25 +146,35 @@ public class MainActivity extends AppCompatActivity {
         if(!st.isEmpty())
         {
             num2 = Integer.parseInt(st);
-            switch (sign)
+            if(sign != 0)
             {
-                case 1:
-                    ans = ans +num1 + num2;
-                    break;
-                case 2:
-                    num1 = num1 - num2;
-                    break;
-                case 3:
-                    num1 = num1 * num2;
-                    break;
-                case 4:
-                    num1 = num1 / num2;
-                    break;
+                switch (sign)
+                {
+                    case 1:
+                        ans = ans + num1 + num2;
+                        sign = 0;
+                        break;
+                    case 2:
+                        ans = ans - num1 - num2;
+                        sign = 0;
+                        break;
+                    case 3:
+                        ans = ans * num1 * num2;
+                        sign = 0;
+                        break;
+                    case 4:
+                        num1 = num1 / num2;
+                        break;
+
+                }
+                num2 = 0;
+                eD1.setText("");
+                eD1.setHint(ans+" ");
+            }
+            else
+            {
 
             }
-            num2 = 0;
-            eD1.setText("");
-            eD1.setHint(ans+" ");
 
         }
         else

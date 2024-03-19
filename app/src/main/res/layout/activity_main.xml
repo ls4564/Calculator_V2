@@ -24,7 +24,7 @@
             android:hint="Enter Number"
             android:inputType="numberSigned|numberDecimal"
             android:textColorHint="#FF9800"
-            android:textSize="24sp" />
+            android:textSize="34sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -163,7 +163,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:gravity="center"
+            android:gravity="center|top"
             android:orientation="horizontal">
 
             <Button
@@ -186,7 +186,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:gravity="center"
+            android:gravity="center|top"
             android:orientation="horizontal">
 
             <Button

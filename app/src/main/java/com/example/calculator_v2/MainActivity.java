@@ -13,12 +13,9 @@ public class MainActivity extends AppCompatActivity {
     EditText eD1;
     Button plus, minus,mult,div,AC,equal,credirs;
     double ans,num;
-
     byte sign;// 1 = + , 2 = - , 3 = * , 4 = /
-    boolean fplus,fminus,fmult,fdiv;
-    boolean first ;
-    boolean cplus, cminus,cmult,cdiv;
-    char c1;
+    boolean first;//check if is the first input
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
         AC = findViewById(R.id.AC);
         equal = findViewById(R.id.equal);
         credirs = findViewById(R.id.credirs);
-
-
-
     }
 
     public void plus(View view)
@@ -123,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         {
             if(first)
             {
-                //1*2 = 2
+                //  1 / 2 = 0.5
                 num = Double.parseDouble(st);
                 ans = ans / num ;
                 eD1.setHint(ans+"");
@@ -185,8 +179,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void AC(View view)
     {
-        //num1 = 0;
-        //num2 = 0;
         ans = 0;
         num = 0;
         sign = 0;
@@ -196,3 +188,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+//eD1.setHint(String.format("%.3f",ans));//if i need

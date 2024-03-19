@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     float num1,num2,ans;
     byte sign;// 1 = + , 2 = - , 3 = * , 4 = /
     boolean fplus,fminus,fmult,fdiv;
+    boolean first ;
     boolean cplus, cminus,cmult,cdiv;
     char c1;
 
@@ -47,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            if(fplus)
+            if(first)
             {
-                //1+2 =3+1
+                //1+2 = 3+1
 
                 num2 = Integer.parseInt(st);
                 ans = ans +num2 + num1;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        fplus = true;
+        first = true;
 
     }
 
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            if(fminus)
+            if(first)
             {
                 //1-2 = -1
 
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        fminus = true;
+        first = true;
 
     }
 
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                         sign = 0;
                         break;
                     case 2:
-                        ans = ans - num1 - num2;
+                        ans = ans + num1 - num2 ;
                         sign = 0;
                         break;
                     case 3:

@@ -48,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 //1+2 = 3+1
 
-                num = Integer.parseInt(st);
+                num = Double.parseDouble(st);
                 ans = ans + num;
                 eD1.setHint(ans+"");
             }
             else
             {
-                ans = Integer.parseInt(st);
+                ans = Double.parseDouble(st);
             }
             eD1.setText("");
 
@@ -74,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 //1-2 = -1
 
-                num = Integer.parseInt(st);
+                num = Double.parseDouble(st);
                 ans = ans - num;
                 eD1.setHint(ans+"");
             }
             else
             {
-                ans = Integer.parseInt(st);
+                ans = Double.parseDouble(st);
             }
             eD1.setText("");
 
@@ -99,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
             if(first)
             {
                 //1*2 = 2
-                num = Integer.parseInt(st);
+                num = Double.parseDouble(st);
                 ans = ans * num ;
                 eD1.setHint(ans+"");
             }
             else
             {
-                ans = Integer.parseInt(st);
+                ans = Double.parseDouble(st);
             }
             eD1.setText("");
 
@@ -121,10 +121,23 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            ans = Integer.parseInt(st);
+            if(first)
+            {
+                //1*2 = 2
+                num = Double.parseDouble(st);
+                ans = ans / num ;
+                eD1.setHint(ans+"");
+            }
+            else
+            {
+                ans = Double.parseDouble(st);
+            }
             eD1.setText("");
 
+
         }
+        first = true;
+
     }
 
     public void equal(View view)
@@ -132,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            num = Integer.parseInt(st);
+            num = Double.parseDouble(st);
             if(sign != 0)
             {
                 switch (sign)
@@ -160,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-
+                Toast.makeText(this, "You Need To Enter a sign", Toast.LENGTH_SHORT);
             }
 
         }

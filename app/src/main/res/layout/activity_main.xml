@@ -22,7 +22,7 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Number"
-            android:inputType="number"
+            android:inputType="numberSigned|numberDecimal"
             android:textColorHint="#FF9800"
             android:textSize="24sp" />
     </LinearLayout>

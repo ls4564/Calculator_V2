@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
-            android:hint="enter number"
+            android:hint="Enter Number"
             android:inputType="number"
             android:textColorHint="#FF9800"
             android:textSize="24sp" />

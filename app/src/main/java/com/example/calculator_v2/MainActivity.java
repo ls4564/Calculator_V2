@@ -36,11 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void lol(View view)
-    {
-
-    }
-
     public void plus(View view)
     {
 
@@ -109,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 num1 = 1;
              }
-            if(fmult)
+            if(first)
             {
                 //1*2 = 2
                 num2 = Integer.parseInt(st);
@@ -125,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        fmult = true;
+        first = true;
 
     }
 
@@ -156,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         sign = 0;
                         break;
                     case 2:
-                        ans = ans + num1 - num2 ;
+                        ans = ans + num1 - num2 ;//ERROR
                         sign = 0;
                         break;
                     case 3:
@@ -190,8 +185,9 @@ public class MainActivity extends AppCompatActivity {
         num2 = 0;
         ans = 0;
         sign = 0;
+        first = false;
         eD1.setText("");
-        eD1.setHint("");
+        eD1.setHint("Enter Number");
 
     }
 }

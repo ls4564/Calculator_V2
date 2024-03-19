@@ -12,7 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText eD1;
     Button plus, minus,mult,div,AC,equal,credirs;
-    float num1,num2,ans,num;
+    double ans,num;
+
     byte sign;// 1 = + , 2 = - , 3 = * , 4 = /
     boolean fplus,fminus,fmult,fdiv;
     boolean first ;
@@ -95,24 +96,16 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            if(ans == 0)
-            {
-                ans = 1;
-            }if(num1 == 0)
-            {
-                num1 = 1;
-             }
             if(first)
             {
                 //1*2 = 2
-                num2 = Integer.parseInt(st);
-                ans = ans * num1 * num2 ;
-                num1 = 1;
+                num = Integer.parseInt(st);
+                ans = ans * num ;
                 eD1.setHint(ans+"");
             }
             else
             {
-                num1 = Integer.parseInt(st);
+                ans = Integer.parseInt(st);
             }
             eD1.setText("");
 
@@ -128,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            num1 = Integer.parseInt(st);
+            ans = Integer.parseInt(st);
             eD1.setText("");
 
         }
@@ -145,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (sign)
                 {
                     case 1:
-                        ans = ans +num;
+                        ans = ans + num;
                         sign = 0;
                         break;
                     case 2:
@@ -179,9 +172,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void AC(View view)
     {
-        num1 = 0;
-        num2 = 0;
+        //num1 = 0;
+        //num2 = 0;
         ans = 0;
+        num = 0;
         sign = 0;
         first = false;
         eD1.setText("");

@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText eD1;
     Button plus, minus,mult,div,AC,equal,credirs;
-    float num1,num2,ans;
+    float num1,num2,ans,num;
     byte sign;// 1 = + , 2 = - , 3 = * , 4 = /
     boolean fplus,fminus,fmult,fdiv;
     boolean first ;
@@ -47,14 +47,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 //1+2 = 3+1
 
-                num2 = Integer.parseInt(st);
-                ans = ans +num2 + num1;
-                num1 = 0;
+                num = Integer.parseInt(st);
+                ans = ans + num;
                 eD1.setHint(ans+"");
             }
             else
             {
-                num1 = Integer.parseInt(st);
+                ans = Integer.parseInt(st);
             }
             eD1.setText("");
 
@@ -74,14 +73,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 //1-2 = -1
 
-                num2 = Integer.parseInt(st);
-                ans = ans + num1 - num2 ;
-                num1 = 0;
+                num = Integer.parseInt(st);
+                ans = ans - num;
                 eD1.setHint(ans+"");
             }
             else
             {
-                num1 = Integer.parseInt(st);
+                ans = Integer.parseInt(st);
             }
             eD1.setText("");
 
@@ -141,29 +139,29 @@ public class MainActivity extends AppCompatActivity {
         String st = eD1.getText().toString();
         if(!st.isEmpty())
         {
-            num2 = Integer.parseInt(st);
+            num = Integer.parseInt(st);
             if(sign != 0)
             {
                 switch (sign)
                 {
                     case 1:
-                        ans = ans + num1 + num2;
+                        ans = ans +num;
                         sign = 0;
                         break;
                     case 2:
-                        ans = ans + num1 - num2 ;//ERROR
+                        ans = ans - num;//ERROR
                         sign = 0;
                         break;
                     case 3:
-                        ans = ans * num1 * num2;
+                        ans = ans * num;
                         sign = 0;
                         break;
                     case 4:
-                        num1 = num1 / num2;
+                        ans = ans / num;
                         break;
 
                 }
-                num2 = 0;
+                num = 0;
                 eD1.setText("");
                 eD1.setHint(ans+" ");
             }

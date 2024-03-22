@@ -3,6 +3,7 @@ package com.example.calculator_v2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -186,6 +187,12 @@ public class MainActivity extends AppCompatActivity {
         eD1.setText("");
         eD1.setHint("Enter Number");
 
+    }
+
+    public void credits_page(View view) {
+        Intent si = new Intent(this, credits.class);
+        si.putExtra("ans",ans);
+        startActivity(si);
     }
 }
 //eD1.setHint(String.format("%.3f",ans));//if i need

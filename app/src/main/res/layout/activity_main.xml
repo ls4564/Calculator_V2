@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2196F3"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -19,10 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#2196F3"
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Number"
             android:inputType="numberSigned|numberDecimal"
+            android:textColor="#000000"
             android:textColorHint="#FF9800"
             android:textSize="34sp" />
     </LinearLayout>
@@ -171,6 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#BD00E8"
                 android:onClick="AC"
                 android:text="A/C"
                 android:textSize="34sp" />
@@ -194,6 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#BD00E8"
                 android:onClick="equal"
                 android:text="="
                 android:textSize="34sp" />
@@ -219,6 +224,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#FF5722"
                 android:onClick="credits_page"
                 android:text="Credits"
                 android:textSize="24sp" />

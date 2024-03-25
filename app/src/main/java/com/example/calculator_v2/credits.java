@@ -20,7 +20,7 @@ public class credits extends AppCompatActivity {
         setContentView(R.layout.activity_credits);
         tv1 = findViewById(R.id.tv1);
         Intent gi = getIntent();
-        float ans = gi.getFloatExtra("ans",-1);
+        double ans = gi.getDoubleExtra("ans",-1);
         tv1.setText("" + ans);
     }
 

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         sign = 1;
         String st = eD1.getText().toString();
-        if(!st.isEmpty())
+        if(check_Input(st))
         {
             if(first)
             {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     {
         sign = 2;
         String st = eD1.getText().toString();
-        if(!st.isEmpty())
+        if(check_Input(st))
         {
             if(first)
             {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     {
         sign = 3;
         String st = eD1.getText().toString();
-        if(!st.isEmpty())
+        if(check_Input(st))
         {
             if(first)
             {
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     {
         sign = 4;
         String st = eD1.getText().toString();
-        if(!st.isEmpty())
+        if(check_Input(st))
         {
             if(first)
             {
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     public void equal(View view)
     {
         String st = eD1.getText().toString();
-        if(!st.isEmpty())
+        if(check_Input(st))
         {
             num = Double.parseDouble(st);
             if(sign != 0)
@@ -186,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
         first = false;
         eD1.setText("");
         eD1.setHint("Enter Number");
-
     }
 
     public void credits_page(View view) {
@@ -194,5 +193,51 @@ public class MainActivity extends AppCompatActivity {
         si.putExtra("ans",ans);
         startActivity(si);
     }
+
+    public boolean check_Input(String input)
+    {
+        if(!input.isEmpty())
+        {
+            if(input.length() == 1)
+            {
+                if(input.charAt(0) >= '0' && input.charAt(0) <= '9')
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if(input.equals("-.") || input.equals("+."))
+                {
+                    return false;
+                }
+                if(input.indexOf('-') != -1 && input.indexOf('+') != -1)
+                {
+                    if(input.indexOf('-')+1 >= '0' && input.indexOf('-')+1 <= '9')
+                    {
+                        return true;
+                    }
+                    else if(input.indexOf('+')+1 >= '0' && input.indexOf('+')+1 <= '9')
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
 }
+}
+
 //eD1.setHint(String.format("%.3f",ans));//if i need

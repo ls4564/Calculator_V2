@@ -188,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
         eD1.setHint("Enter Number");
     }
 
+
     public void credits_page(View view) {
         Intent si = new Intent(this, credits.class);
         si.putExtra("ans",ans);

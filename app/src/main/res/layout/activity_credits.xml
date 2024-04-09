@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="#B8C8F6"
     tools:context=".credits">
 
     <Button
@@ -13,7 +13,7 @@
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#BD00E8"
+        android:backgroundTint="#D15EE4"
         android:onClick="go_back"
         android:text="Return"
         android:textSize="34sp"
@@ -26,6 +26,7 @@
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:gravity="center"
+        android:textColor="#000000"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

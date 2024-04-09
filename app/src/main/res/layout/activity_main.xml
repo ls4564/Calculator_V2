@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="#B8C8F6"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#2196F3"
+            android:background="#B8C8F6"
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Number"
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0085EF"
+                android:backgroundTint="#2196F3"
                 android:onClick="plus"
                 android:text="+"
                 android:textSize="34sp" />
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#F62516"
+                android:backgroundTint="#2196F3"
                 android:onClick="minus"
                 android:text="-"
                 android:textSize="34sp" />
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#04DD0D"
+                android:backgroundTint="#2196F3"
                 android:onClick="mult"
                 android:text="*"
                 android:textSize="34sp" />
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF9800"
+                android:backgroundTint="#2196F3"
                 android:onClick="div"
                 android:text="/"
                 android:textSize="34sp" />
@@ -174,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#BD00E8"
+                android:backgroundTint="#94CC86EA"
                 android:onClick="AC"
                 android:text="A/C"
                 android:textSize="34sp" />
@@ -198,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#BD00E8"
+                android:backgroundTint="#94CC86EA"
                 android:onClick="equal"
                 android:text="="
                 android:textSize="34sp" />
@@ -224,7 +224,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="#D15EE4"
                 android:onClick="credits_page"
                 android:text="Credits"
                 android:textSize="24sp" />

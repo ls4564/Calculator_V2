@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "You Need To Enter a sign", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "You Need To Enter a sign", Toast.LENGTH_SHORT).show();
             }
 
         }
